@@ -18,6 +18,7 @@ foreach ($Entry in $Config.PSObject.Properties){
     if(!$Drive) {
         # Error if no drive with specified label was found
         Write-Error "Drive with label $DriveLabel not found"
+        continue
     }
 
     # Check if letter of drive is as expected
